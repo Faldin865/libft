@@ -6,12 +6,11 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 15:33:12 by gpaul             #+#    #+#             */
-/*   Updated: 2020/08/26 22:05:46 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/08/27 02:04:11 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int		ft_atoi(char *str)
 {
@@ -39,5 +38,5 @@ int		ft_atoi(char *str)
 	if (sign == 1)
 		return (-re);
 	else
-		return (0);
+		return (re);
 }
