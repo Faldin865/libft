@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 15:25:31 by gpaul             #+#    #+#             */
-/*   Updated: 2020/08/26 22:05:35 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/08/31 19:52:09 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 #include <stdio.h>
 
 
-int			ft_atoi(char *str);
+int			ft_atoi(const char *str);
 size_t		ft_strlen(const char *str);
 int			ft_isalnum(int i);
 int			ft_isalpha(int i);

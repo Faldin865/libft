@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 19:55:56 by gpaul             #+#    #+#             */
-/*   Updated: 2020/08/31 17:26:30 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/08/31 19:39:44 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,20 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	char	*str;
-	size_t		size;
+	size_t		i;
+	size_t		n;
 
 
-	size = 0;
-	str = (char*)src;
-	if (dstsize == 0 || dst == '\0')
-		return ((ft_strlen(dst) + ft_strlen(str)));
-	while (dst[size] && size < dstsize)
-		size++;
-	if (dst[size] != '\0')
-		return ((ft_strlen(dst) + ft_strlen(str)));
-	i = size;
-	size = 0;
-	while (i < dstsize - 1 && str[size])
-	{
-		dst[i] = str[size];
-		size++;
+	n = 0;
+	i = 0;
+	while (dst[i] && i < dstsize)
 		i++;
-	}
-	while (i < dstsize)
+	while (src[n] && dstsize > (i + n + 1))
 	{
-		dst[i] = '\0';
-		i++;
+		dst[i + n] = src[n];
+		n++;
 	}
-	return ((ft_strlen(dst) + ft_strlen(str)));
+	if (i != dstsize)
+		dst[i + n] = '\0';
+	return (i + ft_strlen(src));
 }
