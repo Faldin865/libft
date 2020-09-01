@@ -6,7 +6,7 @@
 #    By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/26 00:56:13 by gpaul             #+#    #+#              #
-#    Updated: 2020/09/01 19:57:20 by gpaul            ###   ########.fr        #
+#    Updated: 2020/09/01 20:58:28 by gpaul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,8 @@ SRC	=					ft_atoi.c			\
 						ft_split.c			\
 						ft_putchar_fd.c		\
 						ft_putstr_fd.c		\
+						ft_putnbr_fd.c		\
+
 						
 OBJ					= $(SRC:.c=.o)
 INCLUDE				=   libft.h
