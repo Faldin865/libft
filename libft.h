@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 15:25:31 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/01 17:06:27 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/01 18:05:31 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ size_t		ft_strlcpy(char * dst, const char * src, size_t dstsize);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strdup(const char *s1);
-
-
+char		*ft_strjoin(char const *s1, char const *s2);
+char		**ft_split(char const *s, char c);
 
 
 #endif

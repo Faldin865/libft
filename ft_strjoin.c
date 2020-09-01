@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/26 15:50:53 by gpaul             #+#    #+#             */
-/*   Updated: 2020/08/26 20:25:36 by gpaul            ###   ########.fr       */
+/*   Created: 2020/09/01 17:11:49 by gpaul             #+#    #+#             */
+/*   Updated: 2020/09/01 17:18:52 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-
-int		main(void)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*s3;
+	int		i;
+	int		n;
 
-	printf("%s\n", strnstr("1234yo5", "yo", 7));
-	printf("%s\n", ft_strnstr("1234yo5", "yo", 7));
-	return (0);
+	i = 0;
+	n = 0;
+	if (!(s3 = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+		return (0);
+	while (s1[i])
+	{
+		s3[i] = s1[i];
+		i++;
+	}
+	while(s2[n])
+	{
+		s3[i + n] = s2[n];
+		n++;
+	}
+	s3[i + n] = '\0';
+	return (s3);
 }
