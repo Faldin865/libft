@@ -6,7 +6,7 @@
 #    By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/26 00:56:13 by gpaul             #+#    #+#              #
-#    Updated: 2020/09/03 00:29:45 by gpaul            ###   ########.fr        #
+#    Updated: 2020/09/03 00:38:11 by gpaul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRC	=					ft_atoi.c			\
 						ft_substr.c			\
 						ft_strmapi.c		\
 						ft_bzero.c			\
+						ft_calloc.c			\
 
 OBJ					= $(SRC:.c=.o)
 INCLUDE				=   libft.h
