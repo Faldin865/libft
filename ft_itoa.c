@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 22:42:20 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/01 23:11:52 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/03 00:07:04 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,27 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	signe = 0;
-	if (n == 0)
-		return ("0");
-	if (n == -2147483648)
-		return ("-2147483648");
-	if (!(re = malloc(sizeof(char) * 20)))
+	
+	if (!(re = malloc(sizeof(char) * 12)))
 		return (0);
+	if (n == -2147483648)
+	{
+		//re = "-2147483648\0";
+		//re[11] = '\0';
+		return ("-2147483648\0");
+	}
+	if (n == 0)
+	{
+		re[0] = '0';
+		re[1] = '\0';
+		return (re);
+	}
 	if (n < 0)
 	{
 		n = -n;
 		signe = 1;
 	}
-	while (n)
+	while (n > 0)
 	{
 		re[i] = ((n % 10) + '0');
 		n = n / 10;
@@ -65,3 +74,12 @@ char	*ft_itoa(int n)
 	ft_rev(re);
 	return (re);
 }
+
+/*
+
+int		main(void)
+{
+	printf("%s\n", ft_itoa(-2147483648));
+}
+
+*/
