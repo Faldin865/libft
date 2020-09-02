@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 15:25:31 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/02 01:46:09 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/02 18:00:21 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void		ft_putendl_fd(char *s, int fd);
 char		*ft_strtrim(char const *s1, char const *set);
 char 		*ft_itoa(int n);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 
 
