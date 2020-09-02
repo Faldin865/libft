@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 21:29:39 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/02 00:28:24 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/02 19:26:39 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ char	*ft_alloc(char *str,char *s1_cp, char *charset)
 		n++;
 		x++;
 	}
-
 	str[x] = '\0';
 	return (str);
 }
@@ -77,10 +76,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return ("0");
 	s1_cp = (char*)s1;
 	charset = (char*)set;
+	if (ft_lenght(s1_cp, charset) > 0)
+		if (!(str = malloc(sizeof(char*) * (ft_lenght(s1_cp, charset) + 1))))
+			return (NULL);
 	if (ft_lenght(s1_cp, charset) < 0)
-		return (0);
-	if (!(str = malloc(sizeof(char*) * (ft_lenght(s1_cp, charset) + 1))))
-		return (0);
+		if (!(str = malloc(sizeof(char*) * 1)))
+			return (NULL);
 	str = ft_alloc(str, s1_cp, charset);
 	return (str);
 }
