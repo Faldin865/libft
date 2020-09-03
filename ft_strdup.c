@@ -6,13 +6,13 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 17:00:18 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/01 17:16:29 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/03 02:27:24 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	int		size;
 	char	*s2;

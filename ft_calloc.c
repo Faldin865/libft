@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 17:09:35 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 00:37:37 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/03 02:27:14 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	i = 0;
-	if(!(re = malloc(sizeof(size) * count)))
+	if (!(re = malloc(sizeof(size) * count)))
 		return (NULL);
 	str = (char*)re;
 	while (i <= count)
@@ -27,5 +27,5 @@ void	*ft_calloc(size_t count, size_t size)
 		str[i] = '\0';
 		i++;
 	}
-	return(re);
+	return (re);
 }

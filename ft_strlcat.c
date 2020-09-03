@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 19:55:56 by gpaul             #+#    #+#             */
-/*   Updated: 2020/08/31 19:39:44 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/03 02:27:00 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t		i;
 	size_t		n;
-
 
 	n = 0;
 	i = 0;

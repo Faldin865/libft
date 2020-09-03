@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 16:21:45 by gpaul             #+#    #+#             */
-/*   Updated: 2020/08/27 01:52:07 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/03 02:21:57 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (str[i] == '\0' && str[i] == c)
-		return(str + i);
+		return (str + i);
 	return (0);
 }

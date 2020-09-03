@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 21:29:39 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/02 19:26:39 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/03 02:26:45 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_sep(char c, char *charset)
 	int		i;
 
 	i = 0;
-	while(charset[i])
+	while (charset[i])
 	{
 		if (charset[i] == c)
 			return (1);
@@ -43,7 +43,7 @@ int		ft_lenght(char *s1_cp, char *charset)
 	return (size);
 }
 
-char	*ft_alloc(char *str,char *s1_cp, char *charset)
+char	*ft_alloc(char *str, char *s1_cp, char *charset)
 {
 	int		i;
 	int		n;
