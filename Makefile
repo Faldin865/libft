@@ -6,7 +6,7 @@
 #    By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/26 00:56:13 by gpaul             #+#    #+#              #
-#    Updated: 2020/09/03 03:10:24 by gpaul            ###   ########.fr        #
+#    Updated: 2020/09/03 03:35:17 by gpaul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,12 +49,18 @@ SRC	=					ft_atoi.c			\
 						ft_memset.c			\
 						ft_memccpy.c		\
 
-OBJ					= $(SRC:.c=.o)
-INCLUDE				=   libft.h
+SRC_BONUS	=			
+
+OBJ					=	$(SRC:.c=.o)
+OBJ_BONUS			=	$(SRC_BONUS:.c=.o)
+INCLUDE				=	libft.h
 
 all: $(NAME)
 $(NAME): $(OBJ)
 	@ar -rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+bonus: $(OBJ) $(OBJ_BONUS)
+	@ar rc $(NAME) $(OBJ_BONUS) $(OBJ)
 	@ranlib $(NAME)
 clean :
 	rm -rf $(OBJ) $(OBJ_BONUS)
