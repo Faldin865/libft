@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/03 01:48:36 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:58:10 by gpaul            ###   ########.fr       */
+/*   Created: 2020/09/03 03:09:39 by gpaul             #+#    #+#             */
+/*   Updated: 2020/09/03 03:23:56 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char	*de;
-	char	*str;
-	char	temp;
 	size_t	i;
-	size_t	x;
+	char	*dst;
+	char	*str;
+	int		x;
 
 	x = 0;
-	i = 0;
-	de = (char*)dest;
+	dst = (char*)dest;
 	str = (char*)src;
-	while (i < n)
+	i = 0;
+	while (i < n && x == 0)
 	{
-		temp = str[i];
-		de[i] = temp;
+		if (str[i] == c)
+			x = i + 1;
+		dst[i] = str[i];
 		i++;
 	}
-	return ((void*)de);
+	if (x == 0)
+		return (NULL);
+	else
+		return ((void*)dst + x);
 }
