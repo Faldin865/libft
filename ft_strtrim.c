@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 21:29:39 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:26:45 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/29 18:39:33 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*s1_cp;
 	char	*charset;
 
-	if (s1 == '\0')
+	if (s1 == (void*)0)
 		return ("0");
 	s1_cp = (char*)s1;
 	charset = (char*)set;

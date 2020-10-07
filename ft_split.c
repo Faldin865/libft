@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 17:22:38 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:24:14 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/09/29 18:39:13 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ char	**ft_split(char const *s, char c)
 	char	**re;
 
 	i = 0;
-	if (s == '\0')
+	if (s == (void*)0)
 		return (0);
 	str = (char *)s;
 	if (!(re = malloc(sizeof(char *) * (ft_count_word(str, c) + 1))))
