@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 19:47:56 by gpaul             #+#    #+#             */
-/*   Updated: 2020/10/12 20:05:07 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/10/12 20:06:12 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 t_list		*ft_lstlast(t_list *lst)
 {
-	while(lst)
+	while (lst)
 	{
 		if (lst->next == NULL)
-			return(lst);
+			return (lst);
 		lst = lst->next;
 	}
 	return (lst);
