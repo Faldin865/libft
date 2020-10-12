@@ -6,29 +6,32 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 01:48:36 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:58:10 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/10/12 19:14:55 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void    *ft_memmove(void *destination, const void *source, size_t size)
 {
-	char	*de;
-	char	*str;
-	char	temp;
-	size_t	i;
-	size_t	x;
+    size_t            i;
+    unsigned char    *src;
+    unsigned char    *dst;
 
-	x = 0;
-	i = 0;
-	de = (char*)dest;
-	str = (char*)src;
-	while (i < n)
-	{
-		temp = str[i];
-		de[i] = temp;
-		i++;
-	}
-	return ((void*)de);
+    i = 0;
+    src = (unsigned char *)source;
+    dst = (unsigned char *)destination;
+    if (src < dst)
+    {
+        while (size > 0)
+        {
+            size--;
+            dst[size] = src[size];
+        }
+    }
+    else
+    {
+        ft_memcpy(dst, src, size);
+    }
+    return (dst);
 }
