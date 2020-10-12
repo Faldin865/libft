@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 15:25:31 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 03:35:11 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/10/12 20:38:53 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_memmove(void *dest, const void *src, size_t n);
 void			*ft_memset(void *s, int c, size_t n);
 void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
+t_list			*ft_lstlast(t_list *lst);
+int				ft_lstsize(t_list *lst);
 
 #endif

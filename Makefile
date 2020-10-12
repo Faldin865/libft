@@ -6,7 +6,7 @@
 #    By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/26 00:56:13 by gpaul             #+#    #+#              #
-#    Updated: 2020/09/03 03:35:17 by gpaul            ###   ########.fr        #
+#    Updated: 2020/10/12 20:38:14 by gpaul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ SRC	=					ft_atoi.c			\
 						ft_memset.c			\
 						ft_memccpy.c		\
 
-SRC_BONUS	=			
+SRC_BONUS	=			ft_lstlast.c		\
+						ft_lstsize.c		\
 
 OBJ					=	$(SRC:.c=.o)
 OBJ_BONUS			=	$(SRC_BONUS:.c=.o)
