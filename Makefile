@@ -6,7 +6,7 @@
 #    By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/26 00:56:13 by gpaul             #+#    #+#              #
-#    Updated: 2020/10/13 18:04:41 by gpaul            ###   ########.fr        #
+#    Updated: 2020/10/13 18:27:21 by gpaul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,8 @@ SRC_BONUS	=			ft_lstlast.c		\
 						ft_lstadd_back.c	\
 						ft_lstdelone.c		\
 						ft_lstclear.c		\
-						
+						ft_lstmap.c			\
+						ft_lstiter.c		\
 
 OBJ					=	$(SRC:.c=.o)
 OBJ_BONUS			=	$(SRC_BONUS:.c=.o)

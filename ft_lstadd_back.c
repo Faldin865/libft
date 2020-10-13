@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 17:29:58 by gpaul             #+#    #+#             */
-/*   Updated: 2020/10/13 17:42:27 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/10/13 19:23:28 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list		*lst;
-
 
 	if (!*alst)
 		*alst = new;
