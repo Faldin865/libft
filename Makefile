@@ -6,12 +6,12 @@
 #    By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/26 00:56:13 by gpaul             #+#    #+#              #
-#    Updated: 2020/10/13 18:27:21 by gpaul            ###   ########.fr        #
+#    Updated: 2020/11/16 12:20:37 by gpaul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= libft.a
-CC		= gcc -Wall -Wextra -Werror
+#CC		= gcc -Wall -Wextra -Werror
 RM		= rm -rf
 
 SRC	=					ft_atoi.c			\
@@ -68,7 +68,7 @@ $(NAME): $(OBJ)
 	@ar -rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 bonus: $(OBJ) $(OBJ_BONUS)
-	@ar rc $(NAME) $(OBJ_BONUS) $(OBJ)
+	@ar -rc $(NAME) $(OBJ_BONUS) $(OBJ)
 	@ranlib $(NAME)
 clean :
 	rm -rf $(OBJ) $(OBJ_BONUS)
