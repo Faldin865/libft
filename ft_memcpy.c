@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 00:41:14 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:23:39 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/11/19 17:00:48 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		de[i] = s[i];
 		i++;
 	}
-	return (dest);
+	return ((void*)de);
 }

@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 22:42:20 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:50:43 by gpaul            ###   ########.fr       */
+/*   Updated: 2020/12/30 16:26:14 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,17 @@ char	*ft_itoa(int n)
 		return (0);
 	if (nb == 0)
 		return (ft_zero(re));
-	nb < 0 ? signe = 1 : 0;
-	signe == 1 ? nb = -nb : 0;
+	if (nb < 0)
+		signe = 1;
+	if (signe == 1)
+		nb = -nb;
 	while (nb > 0)
 	{
-		re[i] = ((nb % 10) + '0');
+		re[i++] = ((nb % 10) + '0');
 		nb = nb / 10;
-		i++;
 	}
 	if (signe == 1)
 		re[i++] = '-';
 	re[i] = '\0';
-	ft_rev(re);
-	return (re);
+	return (ft_rev(re));
 }
