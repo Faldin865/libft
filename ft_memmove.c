@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 01:48:36 by gpaul             #+#    #+#             */
-/*   Updated: 2020/11/19 16:58:46 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/06 11:55:41 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *destination, const void *source, size_t size)
 	unsigned char	*src;
 	unsigned char	*dst;
 
+	if (destination == NULL && source == NULL)
+		return (destination);
 	src = (unsigned char *)source;
 	dst = (unsigned char *)destination;
 	if (src < dst)

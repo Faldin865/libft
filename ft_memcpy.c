@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 00:41:14 by gpaul             #+#    #+#             */
-/*   Updated: 2020/11/19 17:00:48 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/06 11:54:06 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (dest == NULL && src == NULL)
+		return (dest);
 	de = (char*)dest;
 	s = (char*)src;
 	while (i < n)
@@ -28,3 +30,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return ((void*)de);
 }
+
+
+////////////chaine nul

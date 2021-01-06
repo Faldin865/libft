@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 20:08:27 by gpaul             #+#    #+#             */
-/*   Updated: 2021/01/05 11:01:30 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/06 11:34:34 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t		n;
 
 	i = 0;
-	if (needle == (void*)0)
+	if (needle == 0)
 		return ((char*)haystack);
 	while (i < len && haystack[i])
 	{
@@ -35,3 +35,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
+
+///////////////check haystack NULL

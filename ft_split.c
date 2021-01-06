@@ -6,13 +6,13 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 17:22:38 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/29 18:39:13 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/06 11:49:47 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_sep(char c, char str)
+static int		ft_sep(char c, char str)
 {
 	if (c == str)
 		return (1);
@@ -20,7 +20,7 @@ int		ft_sep(char c, char str)
 		return (0);
 }
 
-int		ft_count_word(char *str, char c)
+static int		ft_count_word(char *str, char c)
 {
 	int i;
 	int words;
@@ -41,7 +41,7 @@ int		ft_count_word(char *str, char c)
 	return (words);
 }
 
-char	**ft_mem(char *str, char c, char **re)
+static char		**ft_mem(char *str, char c, char **re)
 {
 	int i;
 	int x;
@@ -64,7 +64,7 @@ char	**ft_mem(char *str, char c, char **re)
 	return (re);
 }
 
-char	**ft_alloc(char *str, char c, char **re, int i)
+static char		**ft_alloc(char *str, char c, char **re, int i)
 {
 	int y;
 	int x;
