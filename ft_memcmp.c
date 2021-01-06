@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 00:50:44 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:21:35 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/06 14:16:16 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (n > 0)
 	{
-		while (i < n && (str1[i] || str2[i]))
+		while (i < n)
 		{
 			if (str1[i] != str2[i])
 				return ((int)str1[i] - str2[i]);

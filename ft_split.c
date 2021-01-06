@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 17:22:38 by gpaul             #+#    #+#             */
-/*   Updated: 2021/01/06 11:49:47 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/06 15:27:31 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ static char		**ft_alloc(char *str, char c, char **re, int i)
 	return (re);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	*str;
 	int		i;

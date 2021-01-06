@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 21:29:39 by gpaul             #+#    #+#             */
-/*   Updated: 2021/01/06 11:50:24 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/06 15:58:37 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static char		*ft_alloc(char *str, char *s1_cp, char *charset)
 	return (str);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	char	*s1_cp;
@@ -80,7 +80,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 		if (!(str = malloc(sizeof(char*) * (ft_lenght(s1_cp, charset) + 1))))
 			return (NULL);
 	if (ft_lenght(s1_cp, charset) < 0)
-		if (!(str = malloc(sizeof(char*) * 1)))
+		if (!(str = malloc(sizeof(char*) * 1 + 1)))
 			return (NULL);
 	str = ft_alloc(str, s1_cp, charset);
 	return (str);

@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 00:41:14 by gpaul             #+#    #+#             */
-/*   Updated: 2021/01/06 11:54:06 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/06 15:25:04 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return ((void*)de);
 }
-
-
-////////////chaine nul

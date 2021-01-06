@@ -6,13 +6,13 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 22:42:20 by gpaul             #+#    #+#             */
-/*   Updated: 2021/01/06 11:43:46 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/06 15:24:54 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_rev(char *re)
+static char		*ft_rev(char *re)
 {
 	int		i;
 	int		n;
@@ -31,14 +31,14 @@ char	*ft_rev(char *re)
 	return (re);
 }
 
-char	*ft_zero(char *re)
+static char		*ft_zero(char *re)
 {
 	re[0] = '0';
 	re[1] = '\0';
 	return (re);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*re;
 	int		i;
@@ -66,7 +66,3 @@ char	*ft_itoa(int n)
 	re[i] = '\0';
 	return (ft_rev(re));
 }
-
-
-
-////////////////////////////STATIC
