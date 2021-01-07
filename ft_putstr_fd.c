@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 19:49:18 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:20:29 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/07 14:24:33 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_putstr_fd(char *s, int fd)
 	int		i;
 
 	i = 0;
-	while (s[i] && fd > -1)
+	if (fd > 0)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		while (s[i])
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
 	}
 }
