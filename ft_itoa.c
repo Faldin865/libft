@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 22:42:20 by gpaul             #+#    #+#             */
-/*   Updated: 2021/01/06 15:24:54 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/07 14:19:45 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,19 @@ static char		*ft_zero(char *re)
 	return (re);
 }
 
+static int		size_count(int n)
+{
+	int		res;
+
+	res = 0;
+	while (n != 0)
+	{
+		n /= 10;
+		res++;
+	}
+	return (res + 1);
+}
+
 char			*ft_itoa(int n)
 {
 	char	*re;
@@ -48,7 +61,7 @@ char			*ft_itoa(int n)
 	nb = n;
 	i = 0;
 	signe = 0;
-	if (!(re = malloc(sizeof(char) * 12)))
+	if (!(re = malloc(sizeof(char) * size_count(n) + 1)))
 		return (0);
 	if (nb == 0)
 		return (ft_zero(re));
