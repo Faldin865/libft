@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 17:11:49 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:22:13 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/08 11:17:51 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	n = 0;
+	if ((char)!s1 || (char)!s2)
+		return (NULL);
 	if (!(s3 = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (0);
 	while (s1[i])

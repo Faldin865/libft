@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 19:17:33 by gpaul             #+#    #+#             */
-/*   Updated: 2020/09/03 02:21:11 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/08 11:47:55 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	str = (char*)src;
 	i = 0;
+	if (!dst || !src)
+		return (0);
 	if (dstsize == 0)
 		return (ft_strlen(str));
 	while (i < dstsize - 1 && str[i])
