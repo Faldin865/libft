@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 20:08:27 by gpaul             #+#    #+#             */
-/*   Updated: 2021/01/11 18:24:23 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/11 18:40:01 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t		n;
 
 	i = 0;
-	if (len == 0)
+	if (needle[i] == '\0')
 		return ((char*)haystack);
 	while (i < len && haystack[i])
 	{

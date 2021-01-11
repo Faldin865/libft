@@ -6,7 +6,7 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 15:33:12 by gpaul             #+#    #+#             */
-/*   Updated: 2021/01/07 14:30:17 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/01/11 19:31:32 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,10 @@ int		ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9' && str[i])
 	{
-		re = re * 10 + (str[i] - '0');
-		i++;
+		re = re * 10 + (str[i++] - '0');
 	}
 	if (sign == 1)
-		return (-re);
+		return ((int)-re);
 	else
-		return (re);
+		return ((int)re);
 }
