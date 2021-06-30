@@ -6,13 +6,13 @@
 /*   By: gpaul <gpaul@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/26 15:33:12 by gpaul             #+#    #+#             */
-/*   Updated: 2021/01/11 19:31:32 by gpaul            ###   ########.fr       */
+/*   Updated: 2021/06/30 16:12:16 by gpaul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
@@ -34,7 +34,7 @@ int		ft_atoi(const char *str)
 		re = re * 10 + (str[i++] - '0');
 	}
 	if (sign == 1)
-		return ((int)-re);
+		return ((int) -re);
 	else
 		return ((int)re);
 }
